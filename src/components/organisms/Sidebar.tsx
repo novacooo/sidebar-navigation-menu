@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 import PanelButton from '../atoms/PanelButton';
 
-const Wrapper = styled.div`
-  padding: 30px 28px;
+const Wrapper = styled.nav`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 36px 32px;
   width: 350px;
   height: 650px;
   background-color: ${({ theme }) => theme.BACKGROUND_NAVIGATION};
@@ -17,6 +20,17 @@ const PanelButtonsWrapper = styled.div`
   gap: 6px;
 `;
 
+const Divider = styled.hr`
+  border: none;
+  border-top: 2px solid ${({ theme }) => theme.BORDER};
+  border-radius: 10px;
+`;
+
+const SectionHeader = styled.h6`
+  text-transform: uppercase;
+  color: ${({ theme }) => theme.TEXT_SECONDARY};
+`;
+
 const Sidebar = () => (
   <Wrapper>
     <PanelButtonsWrapper>
@@ -24,6 +38,8 @@ const Sidebar = () => (
       <PanelButton buttonType="minimise" />
       <PanelButton buttonType="maximise" />
     </PanelButtonsWrapper>
+    <Divider />
+    <SectionHeader>Menu</SectionHeader>
   </Wrapper>
 );
 
