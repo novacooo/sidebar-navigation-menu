@@ -1,23 +1,35 @@
 import styled from 'styled-components';
+import { useState } from 'react';
 import PanelButton from '../atoms/PanelButton';
+import ExpandButton from '../atoms/ExpandButton';
 
-const Wrapper = styled.nav`
+interface WrapperProps {
+  isExpanded: boolean;
+}
+
+const Wrapper = styled.nav<WrapperProps>`
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding: 36px 32px;
-  width: 350px;
+  width: ${({ isExpanded }) => (isExpanded ? '350px' : '150px')};
   height: 650px;
   background-color: ${({ theme }) => theme.BACKGROUND_NAVIGATION};
   backdrop-filter: blur(30px);
   box-shadow: 0 50px 70px -30px hsla(0, 0%, 0%, 0.9);
   border: 1px solid ${({ theme }) => theme.BORDER_NAVIGATION};
   border-radius: 10px;
+  transition: width 1s;
 `;
 
 const PanelButtonsWrapper = styled.div`
   display: flex;
   gap: 6px;
+`;
+
+const ExpandButtonWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
 `;
 
 const Divider = styled.hr`
@@ -31,16 +43,27 @@ const SectionHeader = styled.h6`
   color: ${({ theme }) => theme.TEXT_SECONDARY};
 `;
 
-const Sidebar = () => (
-  <Wrapper>
-    <PanelButtonsWrapper>
-      <PanelButton buttonType="exit" />
-      <PanelButton buttonType="minimise" />
-      <PanelButton buttonType="maximise" />
-    </PanelButtonsWrapper>
-    <Divider />
-    <SectionHeader>Menu</SectionHeader>
-  </Wrapper>
-);
+const Sidebar = () => {
+  const [isExpanded, setIsExpanded] = useState(true);
+
+  const handleButtonClick = () => {
+    setIsExpanded((prevState) => !prevState);
+  };
+
+  return (
+    <Wrapper isExpanded={isExpanded}>
+      {/* <PanelButtonsWrapper> */}
+      {/*   <PanelButton buttonType="exit" /> */}
+      {/*   <PanelButton buttonType="minimise" /> */}
+      {/*   <PanelButton buttonType="maximise" /> */}
+      {/* </PanelButtonsWrapper> */}
+      <ExpandButtonWrapper>
+        <ExpandButton isExpanded={isExpanded} onClick={handleButtonClick} />
+      </ExpandButtonWrapper>
+      <Divider />
+      <SectionHeader>Menu</SectionHeader>
+    </Wrapper>
+  );
+};
 
 export default Sidebar;

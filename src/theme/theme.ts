@@ -7,12 +7,18 @@ export interface IThemeType {
   BACKGROUND_MINIMISE_HOVER: string;
   BACKGROUND_MAXIMISE: string;
   BACKGROUND_MAXIMISE_HOVER: string;
+  BACKGROUND_BUTTON: string;
 
   BORDER: string;
   BORDER_NAVIGATION: string;
+  BORDER_BUTTON: string;
+  BORDER_BUTTON_HOVER: string;
 
   TEXT_PRIMARY: string;
   TEXT_SECONDARY: string;
+
+  ICON_PRIMARY: string;
+  ICON_SECONDARY: string;
 }
 
 export const theme: IThemeType = {
@@ -24,10 +30,16 @@ export const theme: IThemeType = {
   BACKGROUND_MINIMISE_HOVER: 'hsl(39, 80%, 52%)',
   BACKGROUND_MAXIMISE: 'hsl(143, 100%, 40%)',
   BACKGROUND_MAXIMISE_HOVER: 'hsl(143, 84%, 37%)',
+  BACKGROUND_BUTTON: 'hsl(217,33%,17%)',
 
-  BORDER: 'hsla(218,25%,24%,0.75)',
+  BORDER: 'hsl(223,29%,26%)',
   BORDER_NAVIGATION: 'hsla(224, 25%, 18%, 0.75)',
+  BORDER_BUTTON: 'hsl(219,25%,21%)',
+  BORDER_BUTTON_HOVER: 'hsl(219,26%,26%)',
 
   TEXT_PRIMARY: 'hsl(0,0%,100%)',
   TEXT_SECONDARY: 'hsl(0,0%,64%)',
+
+  ICON_PRIMARY: 'hsl(0,0%,100%)',
+  ICON_SECONDARY: 'hsl(0,0%,64%)',
 };
