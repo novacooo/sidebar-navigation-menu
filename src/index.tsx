@@ -1,10 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './pages/Home/Home';
+import Root from 'views/Root';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>,
-  document.getElementById('root'),
-);
+ReactDOM.render(<Root />, document.getElementById('root'));
