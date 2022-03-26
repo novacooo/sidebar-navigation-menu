@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import wallpaperDark from 'assets/images/wallpaper_dark.jpg';
 
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
@@ -16,7 +17,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: ${({ theme }) => theme.BACKGROUND};
+    background-image: url(${wallpaperDark});
+    background-size: cover;
     font-size: 1.6rem;
     font-family: 'Nunito', sans-serif;
 

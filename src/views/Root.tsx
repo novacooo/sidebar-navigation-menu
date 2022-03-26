@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import MainTemplate from 'templates/MainTemplate';
 import HomePage from 'views/HomePage';
