@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   width: 350px;
   height: 650px;
   background-color: ${({ theme }) => theme.BACKGROUND_NAVIGATION};
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
   box-shadow: 0 50px 70px -30px hsla(0, 0%, 0%, 0.9);
   border: 1px solid ${({ theme }) => theme.BORDER_NAVIGATION};
   border-radius: 10px;
