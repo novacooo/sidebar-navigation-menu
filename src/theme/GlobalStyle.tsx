@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     background-size: cover;
     font-size: 1.6rem;
     font-family: 'Nunito', sans-serif;
+    letter-spacing: 0.05em;
 
     * {
       margin: 0;

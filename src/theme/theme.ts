@@ -8,6 +8,7 @@ export interface IThemeType {
   BACKGROUND_MAXIMISE: string;
   BACKGROUND_MAXIMISE_HOVER: string;
   BACKGROUND_BUTTON: string;
+  BACKGROUND_MENU_ITEM_HOVER: string;
 
   BORDER: string;
   BORDER_NAVIGATION: string;
@@ -35,6 +36,7 @@ export const theme: IThemeType = {
   BACKGROUND_MAXIMISE: 'hsl(143, 100%, 40%)',
   BACKGROUND_MAXIMISE_HOVER: 'hsl(143, 84%, 37%)',
   BACKGROUND_BUTTON: 'hsl(217,33%,17%)',
+  BACKGROUND_MENU_ITEM_HOVER: 'hsla(221,69%,91%,0.1)',
 
   BORDER: 'hsl(223,29%,26%)',
   BORDER_NAVIGATION: 'hsla(224, 25%, 18%, 0.75)',

@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import avatar from 'assets/images/avatar.jpg';
+import { ReactComponent as BriefCaseIcon } from 'assets/icons/briefcase.svg';
+import { ReactComponent as ClipBoardIcon } from 'assets/icons/clipboard.svg';
+import { ReactComponent as FlashIcon } from 'assets/icons/flash.svg';
+import { ReactComponent as SecurityIcon } from 'assets/icons/security.svg';
+import { ReactComponent as TagIcon } from 'assets/icons/tag.svg';
+import { ReactComponent as TeacherIcon } from 'assets/icons/teacher.svg';
 import PanelButton from '../atoms/PanelButton';
 import ExpandButton from '../atoms/ExpandButton';
 import UserAvatar from '../molecules/UserAvatar';
+import MenuItem from '../molecules/MenuItem';
 
 interface WrapperProps {
   isExpanded: boolean;
@@ -68,6 +75,8 @@ const SectionHeader = styled.h6<WrapperProps>`
   color: ${({ theme }) => theme.TEXT_SECONDARY};
 `;
 
+const MenuItemsWrapper = styled.ul``;
+
 const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(true);
 
@@ -85,12 +94,28 @@ const Sidebar = () => {
       <ExpandButtonWrapper isExpanded={isExpanded}>
         <ExpandButton isExpanded={isExpanded} onClick={handleButtonClick} />
       </ExpandButtonWrapper>
+
       <AnimationWrapper isExpanded={isExpanded} align="flex-start">
         <UserAvatar name="novaco" image={avatar} isExpanded={isExpanded} />
       </AnimationWrapper>
+
       <Divider />
       <AnimationWrapper isExpanded={isExpanded} align="flex-start">
         <SectionHeader isExpanded={isExpanded}>Menu</SectionHeader>
+      </AnimationWrapper>
+
+      <MenuItemsWrapper>
+        <MenuItem icon={BriefCaseIcon} name="My offers" />
+        <MenuItem icon={ClipBoardIcon} name="User's Task" />
+        <MenuItem icon={TagIcon} name="Product Discounts" />
+        <MenuItem icon={TeacherIcon} name="Case Study" />
+        <MenuItem icon={SecurityIcon} name="Security" />
+        <MenuItem icon={FlashIcon} name="Your Ability" />
+      </MenuItemsWrapper>
+
+      <Divider />
+      <AnimationWrapper isExpanded={isExpanded} align="flex-start">
+        <SectionHeader isExpanded={isExpanded}>Messages</SectionHeader>
       </AnimationWrapper>
     </Wrapper>
   );

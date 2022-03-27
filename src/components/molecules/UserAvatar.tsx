@@ -6,7 +6,7 @@ interface NameProps {
 
 interface UserAvatarProps extends NameProps {
   name: string;
-  image: any;
+  image: string;
 }
 
 const Wrapper = styled.div`
