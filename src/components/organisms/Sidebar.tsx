@@ -25,9 +25,9 @@ const Wrapper = styled.nav<WrapperProps>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
-  padding: 36px 32px;
-  min-width: ${({ isExpanded }) => (isExpanded ? '270px' : '120px')};
+  gap: 12px;
+  padding: 34px 30px;
+  min-width: ${({ isExpanded }) => (isExpanded ? '270px' : '130px')};
   height: 650px;
   background-color: ${({ theme }) => theme.BACKGROUND_NAVIGATION};
   backdrop-filter: blur(14px);
@@ -70,7 +70,7 @@ const Divider = styled.hr`
 `;
 
 const SectionHeader = styled.h6<WrapperProps>`
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-transform: uppercase;
   color: ${({ theme }) => theme.TEXT_SECONDARY};
 `;
@@ -78,6 +78,7 @@ const SectionHeader = styled.h6<WrapperProps>`
 const MenuItemsWrapper = styled.ul`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   list-style-type: none;
 `;
@@ -119,22 +120,31 @@ const Sidebar = () => {
           isExpanded={isExpanded}
           icon={ClipBoardIcon}
           name="User's Task"
+          delay={50}
         />
         <MenuItem
           isExpanded={isExpanded}
           icon={TagIcon}
           name="Product Discounts"
+          delay={100}
         />
         <MenuItem
           isExpanded={isExpanded}
           icon={TeacherIcon}
           name="Case Study"
+          delay={150}
         />
-        <MenuItem isExpanded={isExpanded} icon={SecurityIcon} name="Security" />
+        <MenuItem
+          isExpanded={isExpanded}
+          icon={SecurityIcon}
+          name="Security"
+          delay={200}
+        />
         <MenuItem
           isExpanded={isExpanded}
           icon={FlashIcon}
           name="Your Ability"
+          delay={250}
         />
       </MenuItemsWrapper>
 

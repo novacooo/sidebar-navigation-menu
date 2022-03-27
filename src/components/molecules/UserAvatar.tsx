@@ -25,7 +25,7 @@ const Name = styled.h3<NameProps>`
   position: absolute;
   top: 50%;
   left: 64px;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: ${({ theme }) => theme.TEXT_PRIMARY};
   transform: translateY(-50%)
     ${({ isExpanded }) => (isExpanded ? null : 'translateX(30px)')};
