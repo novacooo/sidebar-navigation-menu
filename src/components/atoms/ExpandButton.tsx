@@ -7,8 +7,8 @@ interface ExpandButtonProps {
 }
 
 const ArrowIcon = styled(ArrowLeftIcon)<ExpandButtonProps>`
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   fill: ${({ theme }) => theme.ICON_PRIMARY};
   transform: rotate(${({ isExpanded }) => (isExpanded ? '0deg' : '180deg')})
     translateX(${({ isExpanded }) => (isExpanded ? '-1px' : '-1px')});
@@ -19,8 +19,8 @@ const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   background-color: ${({ theme }) => theme.BACKGROUND_BUTTON};
   border: 1px solid ${({ theme }) => theme.BORDER_BUTTON};
   border-radius: 50px;

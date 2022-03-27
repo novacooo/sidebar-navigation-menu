@@ -18,8 +18,8 @@ const getColors = (buttonType: ButtonType) => {
 };
 
 const PanelButton = styled.button<PanelButtonProps>`
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
   background-color: ${({ buttonType }) => getColors(buttonType)[0]};
   border: none;
   border-radius: 20px;
