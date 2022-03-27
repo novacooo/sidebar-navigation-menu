@@ -19,6 +19,10 @@ export interface IThemeType {
 
   ICON_PRIMARY: string;
   ICON_SECONDARY: string;
+
+  TRANSITION_TIME: string;
+  TRANSITION_TIME_SHORT: string;
+  TRANSITION_EASE: string;
 }
 
 export const theme: IThemeType = {
@@ -42,4 +46,8 @@ export const theme: IThemeType = {
 
   ICON_PRIMARY: 'hsl(0,0%,100%)',
   ICON_SECONDARY: 'hsl(0,0%,64%)',
+
+  TRANSITION_TIME: '0.8s',
+  TRANSITION_TIME_SHORT: '0.5s',
+  TRANSITION_EASE: 'ease-in-out',
 };
