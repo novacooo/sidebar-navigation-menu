@@ -28,7 +28,7 @@ const Name = styled.h3<NameProps>`
   font-size: 1.8rem;
   color: ${({ theme }) => theme.TEXT_PRIMARY};
   transform: translateY(-50%)
-    ${({ isExpanded }) => (isExpanded ? null : 'translateX(50%)')};
+    ${({ isExpanded }) => (isExpanded ? null : 'translateX(30px)')};
   opacity: ${({ isExpanded }) => (isExpanded ? '100%' : '0')};
   visibility: ${({ isExpanded }) => (isExpanded ? 'visible' : 'hidden')};
   transition: ${({ theme }) =>

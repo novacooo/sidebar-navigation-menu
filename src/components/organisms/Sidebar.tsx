@@ -75,7 +75,12 @@ const SectionHeader = styled.h6<WrapperProps>`
   color: ${({ theme }) => theme.TEXT_SECONDARY};
 `;
 
-const MenuItemsWrapper = styled.ul``;
+const MenuItemsWrapper = styled.ul`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  list-style-type: none;
+`;
 
 const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(true);
@@ -105,12 +110,32 @@ const Sidebar = () => {
       </AnimationWrapper>
 
       <MenuItemsWrapper>
-        <MenuItem icon={BriefCaseIcon} name="My offers" />
-        <MenuItem icon={ClipBoardIcon} name="User's Task" />
-        <MenuItem icon={TagIcon} name="Product Discounts" />
-        <MenuItem icon={TeacherIcon} name="Case Study" />
-        <MenuItem icon={SecurityIcon} name="Security" />
-        <MenuItem icon={FlashIcon} name="Your Ability" />
+        <MenuItem
+          isExpanded={isExpanded}
+          icon={BriefCaseIcon}
+          name="My offers"
+        />
+        <MenuItem
+          isExpanded={isExpanded}
+          icon={ClipBoardIcon}
+          name="User's Task"
+        />
+        <MenuItem
+          isExpanded={isExpanded}
+          icon={TagIcon}
+          name="Product Discounts"
+        />
+        <MenuItem
+          isExpanded={isExpanded}
+          icon={TeacherIcon}
+          name="Case Study"
+        />
+        <MenuItem isExpanded={isExpanded} icon={SecurityIcon} name="Security" />
+        <MenuItem
+          isExpanded={isExpanded}
+          icon={FlashIcon}
+          name="Your Ability"
+        />
       </MenuItemsWrapper>
 
       <Divider />
