@@ -17,7 +17,7 @@ const Wrapper = styled.li<NameProps>`
   padding: 14px;
   width: ${({ isExpanded }) =>
     isExpanded ? 'calc(100% + 28px)' : 'calc(28px + 20px)'};
-  border-radius: 10px;
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS};
   transition: ${({ theme, delay }) =>
     `background-color 0.3s ${theme.TRANSITION_EASE} 0s, width ${theme.TRANSITION_TIME} ${theme.TRANSITION_EASE} ${delay}ms`};
 

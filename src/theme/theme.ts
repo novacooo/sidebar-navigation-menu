@@ -28,11 +28,13 @@ export interface IThemeType {
   TRANSITION_TIME: string;
   TRANSITION_TIME_SHORT: string;
   TRANSITION_EASE: string;
+
+  BORDER_RADIUS: string;
 }
 
 export const theme: IThemeType = {
   COLOR_MAIN: 'hsl(218, 98%, 51%)',
-  COLOR_MAIN_HOVER: 'hsl(210,91%,34%)',
+  COLOR_MAIN_HOVER: 'hsl(218, 98%, 46%)',
 
   BACKGROUND: 'hsl(0,0%,100%)',
   BACKGROUND_NAVIGATION: 'hsla(214, 24%, 11%, 0.75)',
@@ -60,4 +62,6 @@ export const theme: IThemeType = {
   TRANSITION_TIME: '0.8s',
   TRANSITION_TIME_SHORT: '0.5s',
   TRANSITION_EASE: 'ease-in-out',
+
+  BORDER_RADIUS: '14px',
 };

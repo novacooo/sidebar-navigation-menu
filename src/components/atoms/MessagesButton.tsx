@@ -41,7 +41,7 @@ const StyledText = styled.span<MessagesButtonProps>`
   color: ${({ theme }) => theme.TEXT_PRIMARY};
   letter-spacing: 0.03em;
   white-space: nowrap;
-  transform: ${({ isExpanded }) => (isExpanded ? null : 'translateX(10px)')};
+  transform: ${({ isExpanded }) => (isExpanded ? null : 'translateX(15px)')};
   visibility: ${({ isExpanded }) => (isExpanded ? 'visible' : 'hidden')};
   opacity: ${({ isExpanded }) => (isExpanded ? '100%' : '0')};
   transition-property: transform, visibility, opacity;

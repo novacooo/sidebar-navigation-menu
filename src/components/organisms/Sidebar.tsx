@@ -32,7 +32,7 @@ const Wrapper = styled.nav<WrapperProps>`
   background-color: ${({ theme }) => theme.BACKGROUND_NAVIGATION};
   backdrop-filter: blur(14px);
   border: 1px solid ${({ theme }) => theme.BORDER_NAVIGATION};
-  border-radius: 10px;
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS};
   transition: min-width
     ${({ theme }) => `${theme.TRANSITION_TIME} ${theme.TRANSITION_EASE}`};
 `;
