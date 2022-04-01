@@ -14,7 +14,7 @@ interface MenuItemProps extends NameProps {
 
 const Wrapper = styled.li<NameProps>`
   position: relative;
-  padding: 14px 14px;
+  padding: 14px;
   width: ${({ isExpanded }) =>
     isExpanded ? 'calc(100% + 28px)' : 'calc(28px + 20px)'};
   border-radius: 10px;

@@ -11,6 +11,7 @@ import PanelButton from '../atoms/PanelButton';
 import ExpandButton from '../atoms/ExpandButton';
 import UserAvatar from '../molecules/UserAvatar';
 import MenuItem from '../molecules/MenuItem';
+import Messages from './Messages';
 
 interface WrapperProps {
   isExpanded: boolean;
@@ -28,10 +29,8 @@ const Wrapper = styled.nav<WrapperProps>`
   gap: 12px;
   padding: 34px 30px;
   min-width: ${({ isExpanded }) => (isExpanded ? '270px' : '123px')};
-  height: 650px;
   background-color: ${({ theme }) => theme.BACKGROUND_NAVIGATION};
   backdrop-filter: blur(14px);
-  //box-shadow: 0 50px 70px -20px hsla(0, 0%, 0%, 0.9);
   border: 1px solid ${({ theme }) => theme.BORDER_NAVIGATION};
   border-radius: 10px;
   transition: min-width
@@ -101,16 +100,13 @@ const Sidebar = () => {
       <ExpandButtonWrapper isExpanded={isExpanded}>
         <ExpandButton isExpanded={isExpanded} onClick={handleButtonClick} />
       </ExpandButtonWrapper>
-
       <AnimationWrapper isExpanded={isExpanded} align="flex-start">
         <UserAvatar name="novaco" image={avatar} isExpanded={isExpanded} />
       </AnimationWrapper>
-
       <Divider />
       <AnimationWrapper isExpanded={isExpanded} align="flex-start">
         <SectionHeader isExpanded={isExpanded}>Menu</SectionHeader>
       </AnimationWrapper>
-
       <MenuItemsWrapper>
         <MenuItem
           onClick={handleButtonClick}
@@ -154,11 +150,11 @@ const Sidebar = () => {
           delay={250}
         />
       </MenuItemsWrapper>
-
       <Divider />
       <AnimationWrapper isExpanded={isExpanded} align="flex-start">
         <SectionHeader isExpanded={isExpanded}>Messages</SectionHeader>
       </AnimationWrapper>
+      <Messages isExpanded={isExpanded} />
     </Wrapper>
   );
 };

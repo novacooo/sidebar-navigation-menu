@@ -1,4 +1,7 @@
 export interface IThemeType {
+  COLOR_MAIN: string;
+  COLOR_MAIN_HOVER: string;
+
   BACKGROUND: string;
   BACKGROUND_NAVIGATION: string;
   BACKGROUND_EXIT: string;
@@ -9,6 +12,7 @@ export interface IThemeType {
   BACKGROUND_MAXIMISE_HOVER: string;
   BACKGROUND_BUTTON: string;
   BACKGROUND_MENU_ITEM_HOVER: string;
+  BACKGROUND_MESSAGES: string;
 
   BORDER: string;
   BORDER_NAVIGATION: string;
@@ -27,6 +31,9 @@ export interface IThemeType {
 }
 
 export const theme: IThemeType = {
+  COLOR_MAIN: 'hsl(218, 98%, 51%)',
+  COLOR_MAIN_HOVER: 'hsl(210,91%,34%)',
+
   BACKGROUND: 'hsl(0,0%,100%)',
   BACKGROUND_NAVIGATION: 'hsla(214, 24%, 11%, 0.75)',
   BACKGROUND_EXIT: 'hsl(1, 100%, 68%)',
@@ -37,6 +44,7 @@ export const theme: IThemeType = {
   BACKGROUND_MAXIMISE_HOVER: 'hsl(143, 84%, 37%)',
   BACKGROUND_BUTTON: 'hsl(217,33%,17%)',
   BACKGROUND_MENU_ITEM_HOVER: 'hsla(221,69%,91%,0.1)',
+  BACKGROUND_MESSAGES: 'hsla(0, 0%, 0%, 0.25)',
 
   BORDER: 'hsl(223,29%,26%)',
   BORDER_NAVIGATION: 'hsla(224, 25%, 18%, 0.75)',
