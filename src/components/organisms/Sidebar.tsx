@@ -27,7 +27,7 @@ const Wrapper = styled.nav<WrapperProps>`
   align-items: flex-start;
   gap: 12px;
   padding: 34px 30px;
-  min-width: ${({ isExpanded }) => (isExpanded ? '270px' : '130px')};
+  min-width: ${({ isExpanded }) => (isExpanded ? '270px' : '123px')};
   height: 650px;
   background-color: ${({ theme }) => theme.BACKGROUND_NAVIGATION};
   backdrop-filter: blur(14px);
@@ -73,6 +73,7 @@ const SectionHeader = styled.h6<WrapperProps>`
   font-size: 1rem;
   text-transform: uppercase;
   color: ${({ theme }) => theme.TEXT_SECONDARY};
+  user-select: none;
 `;
 
 const MenuItemsWrapper = styled.ul`
@@ -112,35 +113,41 @@ const Sidebar = () => {
 
       <MenuItemsWrapper>
         <MenuItem
+          onClick={handleButtonClick}
           isExpanded={isExpanded}
           icon={BriefCaseIcon}
           name="My offers"
         />
         <MenuItem
+          onClick={handleButtonClick}
           isExpanded={isExpanded}
           icon={ClipBoardIcon}
           name="User's Task"
           delay={50}
         />
         <MenuItem
+          onClick={handleButtonClick}
           isExpanded={isExpanded}
           icon={TagIcon}
           name="Product Discounts"
           delay={100}
         />
         <MenuItem
+          onClick={handleButtonClick}
           isExpanded={isExpanded}
           icon={TeacherIcon}
           name="Case Study"
           delay={150}
         />
         <MenuItem
+          onClick={handleButtonClick}
           isExpanded={isExpanded}
           icon={SecurityIcon}
           name="Security"
           delay={200}
         />
         <MenuItem
+          onClick={handleButtonClick}
           isExpanded={isExpanded}
           icon={FlashIcon}
           name="Your Ability"

@@ -9,6 +9,7 @@ interface NameProps {
 interface MenuItemProps extends NameProps {
   icon: FC;
   name: string;
+  onClick?: () => void;
 }
 
 const Wrapper = styled.li<NameProps>`
@@ -46,6 +47,7 @@ const Name = styled.p<NameProps>`
   font-size: 1.2rem;
   color: ${({ theme }) => theme.TEXT_PRIMARY};
   white-space: nowrap;
+  user-select: none;
   transform: translateY(-50%)
     ${({ isExpanded }) => (isExpanded ? null : 'translateX(30px)')};
   visibility: ${({ isExpanded }) => (isExpanded ? 'visible' : 'hidden')};
@@ -56,7 +58,13 @@ const Name = styled.p<NameProps>`
   transition-delay: ${({ delay }) => delay}ms;
 `;
 
-const MenuItem = ({ icon, name, delay = 0, isExpanded }: MenuItemProps) => {
+const MenuItem = ({
+  icon,
+  name,
+  delay = 0,
+  isExpanded,
+  onClick,
+}: MenuItemProps) => {
   const StyledIcon = styled(icon)`
     display: block;
     width: 20px;
@@ -68,7 +76,7 @@ const MenuItem = ({ icon, name, delay = 0, isExpanded }: MenuItemProps) => {
   `;
 
   return (
-    <Wrapper delay={delay} isExpanded={isExpanded}>
+    <Wrapper delay={delay} isExpanded={isExpanded} onClick={onClick}>
       <StyledIcon />
       <Name delay={delay} isExpanded={isExpanded}>
         {name}

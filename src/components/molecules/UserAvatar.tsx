@@ -19,6 +19,7 @@ const Avatar = styled.img`
   height: 50px;
   border: 1px solid ${({ theme }) => theme.BORDER};
   border-radius: 100px;
+  user-select: none;
 `;
 
 const Name = styled.h3<NameProps>`
@@ -27,6 +28,7 @@ const Name = styled.h3<NameProps>`
   left: 64px;
   font-size: 1.6rem;
   color: ${({ theme }) => theme.TEXT_PRIMARY};
+  user-select: none;
   transform: translateY(-50%)
     ${({ isExpanded }) => (isExpanded ? null : 'translateX(30px)')};
   opacity: ${({ isExpanded }) => (isExpanded ? '100%' : '0')};
